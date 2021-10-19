@@ -1,0 +1,30 @@
+openapi: "3.0.0"
+info:
+  version: 1.0.0
+  title: GAS上のAPIテスト
+  description: 最小限のAPIテストです。
+servers:
+  - url: https://script.google.com/macros/s/AKfycbyWm1LMHpwdcoAf7nt0Q_mf3m9H_YK8OL9Z14iZVab7EHNuRGZhZbF6RfYp2tPfJgs
+paths:
+  /exec:
+    post:
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                body:
+                  type: string
+                channel:
+                  type: string
+      responses:
+        "200":
+          description: 成功時のレスポンス
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: 受け付けました

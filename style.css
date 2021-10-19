@@ -1,0 +1,102 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+}
+
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    background-color: #aaa;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    display: block;
+    padding:10px 15px;
+    text-decoration: none;
+    color:#fff;
+}
+
+nav a:hover{
+    color:#ccc;
+}
+
+main{
+    margin-bottom:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    background-color: #aaa;
+    height: 60px;
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact用　*/
+form {
+    width: 60%;
+}
+
+label {
+    display:block;
+    margin-top:15px;
+}
+
+input[type="text"]{
+    width:100%;
+    padding:5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 100%;
+    resize:none;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top:10px;
+}
+
+.form-error {
+    display:block;
+    font-size: small;
+    color:red;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width:640px){
+    nav,footer{
+        background-color: #aac;
+    }
+
+    form{
+        width:90%;
+    }
+
+    button{
+        width:100%;
+        padding:10px;
+    }
+}
